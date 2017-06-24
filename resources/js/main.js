@@ -1,65 +1,69 @@
-// user clicked start button
-
-function start(){
-document.getElementById("questions").innerHTML= "blablabla" ;
-};
 
 
 
-var category= ["history", "language", "nature", "technology"];
-var historyQuestions= ["Mexico achieved independence before USA","Sir Winston Churchill was a Labour Prime Minister","The Ming Dynasty was the final Chinese Dynasty"];
-var languageQuestions= ["There are 24 letters in the Greek alphabet","There is no German word meaning -fluffy","In Welsh a microwave is known as a /'popty ping'"];
-var natureQuestions= ["An octopus has three hearts","There are more stars in space than grains of sand on every beach in the world","There are more fake flamingos in the world than real ones"];
-var technologyQuestions= ["Nintendo was founded after the year 1900.", "Gold is not a good conductor of electricity?"," In computing, keyboards are used as input devices"];
+var category= ['history', 'language', 'nature', 'technology'];
+var historyQuestions= [
+	// store answer with questions for easier retrieval
+	{ question : 'Mexico achieved independence before USA', answer: true },
+	{ question: 'Sir Winston Churchill was a Labour Prime Minister', answer: true },
+	{ question: 'The Ming Dynasty was the final Chinese Dynasty', answer: true }
+];
+var languageQuestions= [{
+	question: 'There are 24 letters in the Greek alphabet', answer: true }, {
+	question: 'There is no German word meaning -fluffy', answer: true }, {
+	question: 'In Welsh a microwave is known as a /\'popty ping\'', answer: true }];
+var natureQuestions= [{
+	question: 'An octopus has three hearts', answer: true }, {
+	question: 'There are more stars in space than grains of sand on every beach in the world', answer: true }, {
+	question: 'There are more fake flamingos in the world than real ones', answer: true }];
+var technologyQuestions= [{
+	question: 'Nintendo was founded after the year 1900.',  answer: true }, {
+	question: 'Gold is not a good conductor of electricity?', answer: true }, {
+	question: ' In computing, keyboards are used as input devices', answer: true }];
 
-// question number ...
-function count(){
-	for (count=0; count<11; count++){
-		document.getElementById("count").innerHTML= "Question " + count;
-	}
-}
+// when declared over here other functions will see it; it's not best practice to register them in global/window scope, but better than nothing ;)
+var count = 0;
+var points = 0; 
+var category;
+var question;
+
 
 // choose a category and a question
 
 function catAndQuest() {
-	var randCat = category[Math.floor(Math.random() * category.length)];
-
-	if (randCat === category[0]){
-		var randQuest = historyQuestions[Math.floor(Math.random() * historyQuestions.length)];
-		document.getElementById("quest").innerHTML= randQuest ;
-	};
-	else if (randCat === category[1]) {
-		var randQuest = languageQuestions[Math.floor(Math.random() * languageQuestions.length)];
-		document.getElementById("quest").innerHTML= randQuest;	
-	};
-	else if (randCat === category[2]) {
-		var randQuest = natureQuestions[Math.floor(Math.random() * natureQuestions.length)];
-		document.getElementById("quest").innerHTML= randQuest;
-	};
-	else (randCat === category[3]) {
-		var randQuest = technologyQuestions[Math.floor(Math.random() * technologyQuestions.length)];
-		document.getElementById("quest").innerHTML= randQuest;
-	};
-}
-
-
-//user answered true
-
-function answerT(){
-
-};
-
-//user answered false
-
-function answerF(){
-
-};
-
-// if user answered right add 1 point
-
-function addPoint(){
-	if (answer is correct) {
-		var points=[];
-		points.push(1);
+	document.getElementById('points').innerHTML= 'Points ' + (points);
+	document.getElementById('count').innerHTML= 'Question ' + (++count);
+	category = category[Math.floor(Math.random() * (category.length - 1))];
+	var questionList;
+	switch(category) {
+		case category[0]: {
+			questionList = historyQuestions;
+			break;
+		}
+		case category[1]: {
+			questionList = languageQuestions;
+			break;
+		}
+		case category[2]: {
+			questionList = natureQuestions;
+			break;
+		}
+		default: {
+			questionList = technologyQuestions;
+		}
 	}
+	question = questionList[Math.floor(Math.random() * (questionList.length - 1))];
+	document.getElementById('quest').innerHTML= question.question; // DRY
 }
+
+
+//user answered
+
+function answer(value){
+	if(value === question.answer) {
+		points++;
+	}	
+	catAndQuest();
+};
+
+

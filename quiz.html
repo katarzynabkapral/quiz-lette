@@ -23,17 +23,18 @@
 <header>
 <h1> Quiz-lette </h1>
 <p>Play a game of true or false</p>
-<button onclick="start()" onclick="catAndQuest()" id="start"> START </button>
+<button onclick="catAndQuest()" id="start"> START </button>
 </header>
 
 
 <div class="container">
 <div id="questions">
 	<div id="count"></div>
+	<div id="points"></div>
 	<div id="category">CATEGORY: <span id="cat"> </span> </div>
 	<div id="quest"> </div>
-	<button onclick="answerT()" id="answerT"> TRUE</button>
-	<button onclick="answerF()" id="answerF"> FALSE</button>
+	<button onclick="answer(true)" id="answerT"> TRUE</button>
+	<button onclick="answer(false)" id="answerF"> FALSE</button>
 </div>
 </div>
 
