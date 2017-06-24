@@ -1,8 +1,9 @@
 // user clicked start button
 
-document.getElementById("start").onclick= function start(){
-document.getElementById("questions").innerHTML= ;
+function start(){
+document.getElementById("questions").innerHTML= "blablabla" ;
 };
+
 
 
 var category= ["history", "language", "nature", "technology"];
@@ -23,19 +24,19 @@ function count(){
 function catAndQuest() {
 	var randCat = category[Math.floor(Math.random() * category.length)];
 
-	if (randCat === "history"){
+	if (randCat === category[0]){
 		var randQuest = historyQuestions[Math.floor(Math.random() * historyQuestions.length)];
 		document.getElementById("quest").innerHTML= randQuest ;
 	};
-	else if (randCat === "language") {
+	else if (randCat === category[1]) {
 		var randQuest = languageQuestions[Math.floor(Math.random() * languageQuestions.length)];
 		document.getElementById("quest").innerHTML= randQuest;	
 	};
-	else if (randCat === "nature") {
+	else if (randCat === category[2]) {
 		var randQuest = natureQuestions[Math.floor(Math.random() * natureQuestions.length)];
 		document.getElementById("quest").innerHTML= randQuest;
 	};
-	else (randCat === "technology") {
+	else (randCat === category[3]) {
 		var randQuest = technologyQuestions[Math.floor(Math.random() * technologyQuestions.length)];
 		document.getElementById("quest").innerHTML= randQuest;
 	};
