@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
+	background-color: #b1bed3;
+}
+
+header h1{
+	font-family: 'Bungee Shade', cursive;
+	font-size: 65px;
+	text-align: center;
+}
+
+header p{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 7px;
+	margin-top: -70px;
+	padding-bottom: 60px;
+}
+
+#start {
+	margin-left: 42%;
+	font-size: 40px;
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#start:after {
+    content: "";
+    background: #868679;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#start:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+#questionTitle {
+	text-align: center;
+	font-size: 45px;
+	padding-bottom: 10px;
+}
+
+#category {
+	text-align: center;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+#quest {
+	text-align: center;
+	padding-bottom: 10px;
+} 
+
+#answerT {
+	margin: 0% 10% 0% 30%;
+	
+    background-color: #4CAF50;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+#answerF {
+	margin: 0% 20% 0% 15%;
+	
+    background-color: #4CAF50;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}

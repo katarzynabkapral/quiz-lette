@@ -1,0 +1,45 @@
+<html>
+<head>
+
+<!-- Content Type Meta tag -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+<!--Responsive Viewport Meta tag-->
+     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        
+<title>QUIZ-lette</title>
+
+<!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+
+<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
+</head>
+<body>
+
+<header>
+<h1> Quiz-lette </h1>
+<p>Play a game of true or false</p>
+<button onclick="start()" onclick="catAndQuest()" id="start"> START </button>
+</header>
+
+
+<div class="container">
+<div id="questions">
+	<div id="count"></div>
+	<div id="category">CATEGORY: <span id="cat"> </span> </div>
+	<div id="quest"> </div>
+	<button onclick="answerT()" id="answerT"> TRUE</button>
+	<button onclick="answerF()" id="answerF"> FALSE</button>
+</div>
+</div>
+
+
+
+<!-- JavaScript -->
+		<script src="resources/js/main.js"></script>
+</body>
+</html>
