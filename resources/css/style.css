@@ -37,7 +37,12 @@ header p{
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-    
+    -webkit-animation-name: changecolour; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: changecolour;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
     
 }
 
@@ -54,6 +59,19 @@ header p{
 
 }
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes changecolour {
+    0% {color: white;}
+    50% {color: black;}
+    100% {color: white;}
+}
+
+/* Standard syntax */
+@keyframes changecolour {
+   0% {color: white;}
+    50% {color: black;}
+    100% {color: white;}
+}
 
 
 
