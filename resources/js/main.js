@@ -27,17 +27,22 @@ var points = 0;
 var category;
 var question;
 
-
+//show answer buttons
+function showButtons(){
+	document.getElementById('answerT').style.display="";
+	document.getElementById('answerF').style.display="";
+}
 
 
 // choose a category and a question
 
 function catAndQuest() {
 	start.style.display = 'none';
+	showButtons();
 
 	document.getElementById('points').innerHTML= 'Points: ' + (points);
 	document.getElementById('count').innerHTML= 'Question ' + (++count);
-		
+
 	category = category[Math.floor(Math.random() * (category.length - 1))];
 	document.getElementById('category').innerHTML= 'Category: ' + (category);
 
