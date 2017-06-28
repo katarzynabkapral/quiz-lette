@@ -32,11 +32,13 @@ header p{
     padding: 20px;
     width: 200px;
     text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+    
+    
 }
 
 #start:after {
@@ -49,22 +51,25 @@ header p{
     margin-left: -20px!important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s
-}
 
-#start:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
 }
 
 
-#questionTitle {
+
+
+#count {
 	text-align: center;
 	font-size: 45px;
 	padding-bottom: 10px;
 }
+
+#points {
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 10px;
+	padding-top: 40px;
+}
+
 
 #category {
 	text-align: center;
