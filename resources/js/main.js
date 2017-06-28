@@ -26,14 +26,14 @@ var Questions= [
 	{category: 'nature', question: 'Cracking your knuckles too much will give you arthritis', answer: false },
 	{category: 'nature', question: 'Black holes are not black', answer: false },
 	{category: 'nature', question: 'It rains diamonds on Saturn and Jupiter', answer: true },
-	{category: 'nature', question: ' DNA is an abbreviation for ‘Deoxyribonucleic acid’', answer: true }
+	{category: 'nature', question: ' DNA is an abbreviation for ‘Deoxyribonucleic acid’', answer: true },
 
 	{category: 'technology', question: 'Nintendo was founded after the year 1900',  answer: false }, 
 	{category: 'technology', question: 'Gold is not a good conductor of electricity', answer: false }, 
-	{category: 'technology', question: ' In computing, keyboards are used as input devices', answer: true }
-	{category: 'technology', question: ' Atomic bombs work by atomic fission', answer: true }
-	{category: 'technology', question: ' Solar power generates electricity from the Sun', answer: true }
-	{category: 'technology', question: ' Apple iPhone first become available in 2006', answer: false }
+	{category: 'technology', question: ' In computing, keyboards are used as input devices', answer: true },
+	{category: 'technology', question: ' Atomic bombs work by atomic fission', answer: true },
+	{category: 'technology', question: ' Solar power generates electricity from the Sun', answer: true },
+	{category: 'technology', question: ' Apple iPhone first become available in 2006', answer: false },
 
 ];
 
