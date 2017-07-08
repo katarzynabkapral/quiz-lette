@@ -1,7 +1,7 @@
 
 
 
-var category= ['history', 'language', 'nature', 'technology'];
+var currentCategory= ['history', 'language', 'nature', 'technology'];
 var Questions= [
 	// store answer with questions for easier retrieval
 	{ category: 'history', question : 'Mexico achieved independence before USA', answer: false },
@@ -59,7 +59,7 @@ function catAndQuest() {
 	document.getElementById('points').innerHTML= 'Points: ' + (points);
 	document.getElementById('count').innerHTML= 'Question ' + (++count);
 
-	category = category[Math.floor(Math.random() * (category.length - 1))];
+	category = currentCategory[Math.floor(Math.random() * (currentCategory.length - 1))];
 	document.getElementById('category').innerHTML= 'Category: ' + (category);
 
 	var questionList= Questions.filter( function (question){
