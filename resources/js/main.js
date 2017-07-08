@@ -63,11 +63,11 @@ function catAndQuest() {
 	document.getElementById('category').innerHTML= 'Category: ' + (category);
 
 	var questionList= Questions.filter( function (question){
-		return Questions.category === category;
+		return question.category === category;
 	})
 
 	question = questionList[Math.floor(Math.random() * (questionList.length - 1))];
-	document.getElementById('quest').innerHTML= Questions.question; // DRY
+	document.getElementById('quest').innerHTML= question.question; // DRY
 };
 
 
