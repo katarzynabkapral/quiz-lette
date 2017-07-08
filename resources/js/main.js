@@ -63,18 +63,18 @@ function catAndQuest() {
 	document.getElementById('category').innerHTML= 'Category: ' + (category);
 
 	var questionList= Questions.filter( function (question){
-		return questions.category === category;
+		return Questions.category === category;
 	})
 
 	question = questionList[Math.floor(Math.random() * (questionList.length - 1))];
-	document.getElementById('quest').innerHTML= question.question; // DRY
+	document.getElementById('quest').innerHTML= Questions.question; // DRY
 };
 
 
 //user answered question
 
 function answer(value){
-	if(value === question.answer) {
+	if(value === Questions.answer) {
 		points++;
 	}	
 	catAndQuest();
