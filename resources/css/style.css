@@ -97,15 +97,17 @@ header p{
 }
 #quest {
 	text-align: center;
+	padding-top: 10px;
 	padding-bottom: 10px;
+	font-size: 30px;
 } 
 
 #answerT {
-	margin: 0% 10% 0% 30%;
+	margin: 5% 10% 0% 30%;
 	
     background-color: #4CAF50;
     border: none;
-    font-size: 15px;
+    font-size: 20px;
     color: #FFFFFF;
     padding: 20px;
     width: 100px;
@@ -118,11 +120,11 @@ header p{
 
 }
 #answerF {
-	margin: 0% 20% 0% 15%;
+	margin: 5% 20% 0% 15%;
 	
     background-color: #4CAF50;
     border: none;
-    font-size: 15px;
+    font-size: 20px;
     color: #FFFFFF;
     padding: 20px;
     width: 100px;
