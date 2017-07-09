@@ -13,9 +13,9 @@ var Questions= [
 	{ category: 'history', question: 'The Iron Age comes after the Bronze Age', answer: true },
 
 	{category: 'language', question: 'There are 24 letters in the Greek alphabet', answer: true }, 
-	{category: 'language', question: 'There is no German word meaning /\'fluffy\'', answer: false }, 
-	{category: 'language', question: 'In Welsh a microwave is known as a /\'popty ping\'', answer: true },
-	{category: 'language', question: '/\'To\', /\'Too\', and /\'Two\' are heteronyms', answer: false },
+	{category: 'language', question: 'There is no German word meaning \'fluffy\'', answer: false }, 
+	{category: 'language', question: 'In Welsh a microwave is known as a \'popty ping\'', answer: true },
+	{category: 'language', question: '\'To\', \'Too\', and \'Two\' are heteronyms', answer: false },
 	{category: 'language', question: 'Bengali is the most spoken language in India', answer: false },
 	{category: 'language', question: 'There are more 5 letter words than 12 letter words', answer: false },
 	{category: 'language', question: 'South Africa has 11 official languages', answer: true },
@@ -74,7 +74,7 @@ function catAndQuest() {
 //user answered question
 
 function answer(value){
-	if(value === Questions.answer) {
+	if(value === question.answer) {
 		points++;
 	}	
 	catAndQuest();
@@ -84,7 +84,7 @@ function answer(value){
 // user wins when 10 points are collected
 
 function win(points){
-	if (points === 10){
-		alert("You win");
+	if ( points == 10 ){
+		console.log("You win");
 	}
 }
