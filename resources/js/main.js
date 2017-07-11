@@ -1,6 +1,5 @@
 
 
-
 var currentCategory= ['history', 'language', 'nature', 'technology'];
 var Questions= [
 	// store answer with questions for easier retrieval
@@ -44,14 +43,12 @@ var category;
 var question;
 
 //show answer buttons only after clicking start button
-
 function showButtons(){
 	document.getElementById('answerT').style.display="";
 	document.getElementById('answerF').style.display="";
 }
 
 // choose a category and a question
-
 function catAndQuest() {
 	start.style.display = 'none';
 	showButtons();
@@ -67,12 +64,19 @@ function catAndQuest() {
 	})
 
 	question = questionList[Math.floor(Math.random() * (questionList.length - 1))];
-	document.getElementById('quest').innerHTML= question.question; // DRY
+	document.getElementById('quest').innerHTML= question.question;
 };
 
 
-//user answered question
+// create a copy of Questions array
+var copy = [].concat(Questions);
 
+// delete used question out of the copy array
+function deleteUsed (){
+copy.splice(copy.indexOf(question),1);
+};
+
+//user answered question
 function answer(value){
 	if(value === question.answer) {
 		points++;
@@ -82,7 +86,6 @@ function answer(value){
 
 
 // user wins when 10 points are collected
-
 function win(points){
 	if ( points == 10 ){
 		console.log("You win");
