@@ -73,7 +73,7 @@ var copy = [].concat(Questions);
 
 // delete used question out of the copy array
 function deleteUsed (){
-copy.splice(copy.indexOf(Questions),1);
+copy.splice(copy.indexOf(question),1);
 };
 
 //user answered question
