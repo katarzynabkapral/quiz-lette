@@ -30,11 +30,15 @@
 <div class="container">
 <div id="questions">
 	<div id="count"></div>
-	<div id="points"></div>
-	<div id="category">CATEGORY: <span id="cat"> </span> </div>
+	<div id="category"></span> </div>
 	<div id="quest"> </div>
-	<button onclick="answer(true)" id="answerT"> TRUE</button>
-	<button onclick="answer(false)" id="answerF"> FALSE</button>
+	<button onclick="answer(true)" style="display:none;" id="answerT"> TRUE</button>
+	<button onclick="answer(false)" style="display:none;" id="answerF"> FALSE</button>
+	<div id="points"></div>
+</div>
+<div id="winner" style="display:none;">YOU WIN! Congrats!</div>
+<div id="looser" style="display:none;">Sorry, no more questions. You loose!</div>
+<button onclick="restart()" style="display:none;" id="reset"> PLAY AGAIN? </button>
 </div>
 </div>
 
