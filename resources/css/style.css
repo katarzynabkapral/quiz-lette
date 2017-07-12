@@ -1,5 +1,30 @@
 @charset "UTF-8";
 
+
+@media (min-width: 110px) and (max-width: 554px) {
+header h1 {
+	font-size: 50px !important;
+}
+header p{
+	letter-spacing: 4px !important;
+}
+#start{
+	margin-left: 30% !important;
+}
+
+}
+@media (min-width: 555px) and (max-width: 710px)
+{
+
+}
+
+
+@media (min-width: 712px) and (max-width: 910px){
+#start {
+	margin-left: 20% !important;
+}
+}
+
 body {
 	font-family: 'Coda', cursive;
 	font-size: 25px;
@@ -135,4 +160,42 @@ header p{
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+}
+
+
+#winner{
+	text-align: center;
+	font-size: 45px;
+	padding-bottom: 10px;
+}
+
+#looser{
+	text-align: center;
+	font-size: 45px;
+	padding-bottom: 10px;
+}
+
+#reset{
+	background-color: #4CAF50;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    position: relative;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+     -webkit-animation-name: changecolour; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+     -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: changecolour;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+	margin-left: 40%;
+	margin-top:5%;
+    
 }
