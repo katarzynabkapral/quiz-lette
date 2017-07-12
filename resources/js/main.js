@@ -73,22 +73,18 @@ var copy = [].concat(Questions);
 
 // delete used question out of the copy array
 function deleteUsed (){
-copy.splice(copy.indexOf(question),1);
+Questions.splice(Questions.indexOf(question),1);
 };
 
 //user answered question
 function answer(value){
+	deleteUsed();
 	if(value === question.answer) {
 		points++;
-		win();
+		if(points==10){
+			alert('you win');
+		}
 	}	
 	catAndQuest();
 };
 
-
-// user wins when 10 points are collected
-function win(points){
-	if ( points === 10 ){
-		console.log("You win");
-	}
-}
