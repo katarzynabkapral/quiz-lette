@@ -1,5 +1,4 @@
 
-
 var currentCategory= ['history', 'language', 'nature', 'technology'];
 var Questions= [
 	// store answer with questions for easier retrieval
@@ -56,17 +55,25 @@ function catAndQuest() {
 	document.getElementById('points').innerHTML= 'Points: ' + (points);
 	document.getElementById('count').innerHTML= 'Question ' + (++count);
 
-	category = currentCategory[Math.floor(Math.random() * (currentCategory.length - 1))];
+	category = currentCategory[Math.floor(Math.random() * (currentCategory.length))];
 	document.getElementById('category').innerHTML= 'Category: ' + (category);
 
 	var questionList= Questions.filter( function (question){
 		return question.category === category;
-	})
+	});
 
-	question = questionList[Math.floor(Math.random() * (questionList.length - 1))];
+	question = questionList[Math.floor(Math.random() * (questionList.length))];
 	document.getElementById('quest').innerHTML= question.question;
-};
+}
 
+//if there are no more questions in the category, choose different category
+function chooseAgain(){
+	if (currentCategory.length === 0){
+
+	} else {
+		[Math.floor(Math.random() * (currentCategory.length))];
+	}
+}
 
 // create a copy of Questions array
 var copy = [].concat(Questions);
@@ -75,20 +82,44 @@ var copy = [].concat(Questions);
 function deleteUsed (){
 if(Questions.length > 0) {
 Questions.splice(Questions.indexOf(question),1);
+console.log(question);
 } else {
-alert('sorry, no more questions. You loose!');
+	document.getElementById('answerT').style.display="none";
+	document.getElementById('answerF').style.display="none";
+	document.getElementById('questions').style.display="none";
+	document.getElementById('looser').style.display="";
+	document.getElementById('reset').style.display="";
 }
-};
+}
+
+
+//show winner/looser and restart button
+//function winLooseRestart(){
+//	document.getElementById('winner').style.display="";
+//	document.getElementById('looser').style.display="";
+//	document.getElementById('reset').style.display="";
+//}
+
 
 //user answered question
 function answer(value){
-	deleteUsed()
+	deleteUsed();
 	if(value === question.answer) {
 		points++;
 		if(points==10){
-			alert('you win');
+			document.getElementById('answerT').style.display="none";
+			document.getElementById('answerF').style.display="none";
+			document.getElementById('questions').style.display="none";
+			document.getElementById('winner').style.display="";
+			document.getElementById('reset').style.display="";
 		}
 	}	
 	catAndQuest();
-};
+}
+
+//restart the game
+function restart(){
+	document.location.href="";
+}
+
 
