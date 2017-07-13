@@ -64,15 +64,15 @@ function catAndQuest() {
 
 	question = questionList[Math.floor(Math.random() * (questionList.length))];
 	document.getElementById('quest').innerHTML= question.question;
+	
+	chooseAgain();
 }
 
 //if there are no more questions in the category, choose different category
 function chooseAgain(){
-	if (currentCategory.length === 0){
-
-	} else {
-		[Math.floor(Math.random() * (currentCategory.length))];
-	}
+	if (questionList.length === 0){
+		[Math.floor(Math.random() * currentCategory.length)];
+	} 
 }
 
 // create a copy of Questions array
