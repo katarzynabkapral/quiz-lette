@@ -93,14 +93,6 @@ console.log(question);
 }
 
 
-//show winner/looser and restart button
-//function winLooseRestart(){
-//	document.getElementById('winner').style.display="";
-//	document.getElementById('looser').style.display="";
-//	document.getElementById('reset').style.display="";
-//}
-
-
 //user answered question
 function answer(value){
 	deleteUsed();
