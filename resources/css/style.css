@@ -1,28 +1,65 @@
 @charset "UTF-8";
 
 
-@media (min-width: 110px) and (max-width: 554px) {
+@media (min-width: 110px) and (max-width: 711px) {
+
 header h1 {
 	font-size: 50px !important;
 }
+
 header p{
 	letter-spacing: 4px !important;
 }
+
 #start{
 	margin-left: 30% !important;
+	margin-right: 30% !important;
 }
 
+#quest{
+	font-size: 20px !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
 }
-@media (min-width: 555px) and (max-width: 710px)
-{
 
+#answerT {
+	margin: 5% 0% 0% 25% !important;
 }
+#answerF {
+	margin: 5% 0% 0% 10% !important;  
+}
+}
+
+@media (min-width: 508px) and (max-width: 711px){
+header h1 {
+	font-size: 65px !important;
+}
+
+header p{
+	letter-spacing: 7px !important;
+}
+}
+
 
 
 @media (min-width: 712px) and (max-width: 910px){
+
 #start {
-	margin-left: 20% !important;
+	margin-left: 40% !important;
 }
+
+#answerT {
+	margin: 5% 0% 0% 30% !important;
+}
+#answerF {
+	margin: 5% 0% 0% 15% !important;  
+}
+#quest{
+	
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
 }
 
 body {
@@ -126,6 +163,8 @@ header p{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-size: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 } 
 
 #answerT {
