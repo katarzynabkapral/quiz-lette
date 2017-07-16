@@ -54,25 +54,19 @@ function catAndQuest() {
 
 	document.getElementById('points').innerHTML= 'Points: ' + (points);
 	document.getElementById('count').innerHTML= 'Question ' + (++count);
-
-	category = currentCategory[Math.floor(Math.random() * (currentCategory.length))];
+    
+	currentCategory = Questions.map(function(question) {
+    	return question.category;
+    });
+	category = currentCategory[Math.floor(Math.random() * currentCategory.length)];
 	document.getElementById('category').innerHTML= 'Category: ' + (category);
 
 	var questionList= Questions.filter( function (question){
 		return question.category === category;
 	});
 
-	question = questionList[Math.floor(Math.random() * (questionList.length))];
+	question = questionList[Math.floor(Math.random() * questionList.length)];
 	document.getElementById('quest').innerHTML= question.question;
-	
-	chooseAgain();
-}
-
-//if there are no more questions in the category, choose different category
-function chooseAgain(){
-	if (questionList.length === 0){
-		[Math.floor(Math.random() * currentCategory.length)];
-	} 
 }
 
 // create a copy of Questions array
@@ -80,25 +74,23 @@ var copy = [].concat(Questions);
 
 // delete used question out of the copy array
 function deleteUsed (){
-if(Questions.length > 0) {
-Questions.splice(Questions.indexOf(question),1);
-console.log(question);
-} else {
-	document.getElementById('answerT').style.display="none";
-	document.getElementById('answerF').style.display="none";
-	document.getElementById('questions').style.display="none";
-	document.getElementById('looser').style.display="";
-	document.getElementById('reset').style.display="";
+	if(Questions.length > 0) {
+		Questions.splice(Questions.indexOf(question),1);
+	} else {
+		document.getElementById('answerT').style.display="none";
+		document.getElementById('answerF').style.display="none";
+		document.getElementById('questions').style.display="none";
+		document.getElementById('looser').style.display="";
+		document.getElementById('reset').style.display="";
+	}
 }
-}
-
 
 //user answered question
 function answer(value){
 	deleteUsed();
 	if(value === question.answer) {
 		points++;
-		if(points==10){
+		if(points==15){
 			document.getElementById('answerT').style.display="none";
 			document.getElementById('answerF').style.display="none";
 			document.getElementById('questions').style.display="none";
