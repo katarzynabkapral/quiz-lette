@@ -53,7 +53,7 @@ function catAndQuest() {
 	showButtons();
 
 	document.getElementById('points').innerHTML= 'Points: ' + (points);
-	document.getElementById('count').innerHTML= 'Question ' + (++count);
+	document.getElementById('count').innerHTML= 'Question ' + (++count) + ' \/ 27';
     
 	currentCategory = Questions.map(function(question) {
     	return question.category;
